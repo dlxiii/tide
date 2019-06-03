@@ -10,7 +10,7 @@ for i = 1:length(ext)
     % d =[d; ['../data/current',ext{i}] ];
 end
 str = {d.name};
-if length(str) ~= 0
+if ~isempty(str)
     [Selection,ok] = listdlg('ListString',str,'name','Choose pictures','PromptString',...
         'Please choose pictures','SelectionMode','Multiple', 'ListSize',[400,200]);
 else
@@ -19,11 +19,11 @@ end
 set(0,'defaultfigurecolor','w');
 
 for i = 1:length(Selection)
-    figure(i)
+    figure(99999)
     [cdata, colormap] = imread(str{Selection(i)});
     imshow(cdata, colormap,'Border','tight')%,'InitialMagnification','fit')% Or :  d(Selection(i)).name == str{Selection}
     % title(str(Selection(i)));
-    frame=getframe(i);
+    frame=getframe(99999);
     im=frame2im(frame);%制作gif文件，图像必须是index索引图像
     [I,map]=rgb2ind(im,256);
     k=i-0;
