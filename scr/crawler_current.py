@@ -16,6 +16,8 @@ from bs4 import BeautifulSoup
 # https://www1.kaiho.mlit.go.jp/KANKYO/TIDE/cgi-bin/curr_pred.cgi?area=0001&br=notns-win32&year=2014&month=01&day=09&hour=9&btn=%BF%E4%A1%A1%BB%BB
 # https://www1.kaiho.mlit.go.jp/KANKYO/TIDE/cgi-bin/curr_img/01_2014010909.gif
 
+# https://www1.kaiho.mlit.go.jp/KANKYO/TIDE/curr_pred/
+
 def getData(code, year, month, day, hour):
     url_base = "https://www1.kaiho.mlit.go.jp/KANKYO/TIDE/cgi-bin/"
     html = url_base + 'curr_pred.cgi?area=' + code + '&br=notns-win32&year=' + year + '&month=' + month + '&day=' + day + '&hour=' + hour + '&btn=%BF%E4%A1%A1%BB%BB'
@@ -56,7 +58,7 @@ if __name__=="__main__":
     t1 = datetime.datetime(timelist[4],timelist[5],timelist[6],timelist[7])
     
     for i in range(len(codelist)):
-        name = codelist[i][0]
+        name = codelist[i][1]
         code = codelist[i][2]
         path = '../data/current/'
         file = code + '_' + name
