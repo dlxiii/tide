@@ -37,13 +37,13 @@ def makeDir(path):
     return None
 
 def clearFile(path, file):
-    if os.path.isfile(path + file + '.gif'):
-        os.remove(path + file + '.gif')
+    if os.path.isfile(path + file + '.png'):
+        os.remove(path + file + '.png')
     return None
 
 def writeFile(time, value, path, name):
     fid = requests.get(value)
-    with open(path + name + '_tidal_current_' + str(hour)[0:10] + '_' + str(hour)[11:13] + '.gif', 'wb') as f:
+    with open(path + name + '_tidal_current_' + str(hour)[0:10] + '_' + str(hour)[11:13] + '.png', 'wb') as f:
         f.write(fid.content)
     return None
 
