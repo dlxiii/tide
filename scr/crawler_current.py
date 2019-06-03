@@ -43,14 +43,16 @@ def clearFile(path, file):
 
 def writeFile(time, value, path, name):
     fid = requests.get(value)
-    with open(path + name + '_' + time[0:4] + '_' + time[5:7] + '_' + time[8:10] + '_' + time [11:13]+ '.gif', 'wb') as f:
+    with open(path + name + '_tidal_current_' + str(hour)[0:10] + '_' + str(hour)[11:13] + '.gif', 'wb') as f:
         f.write(fid.content)
     return None
 
 if __name__=="__main__":
     start = time.time()   
     codelist = np.array([\
-                         ('東京湾','Tokyowan','0001') \
+                         ('東京湾','Tokyo_Bay','0001') \
+                         # ('伊勢湾','Ise_Bay','02') \
+                         # ('瀬戸内沿岸','Seto_Inland_Sea','03') \
                          ]) 
     timelist = [2014,1,9,9,2014,2,8,9]
     
@@ -61,7 +63,7 @@ if __name__=="__main__":
         name = codelist[i][1]
         code = codelist[i][2]
         path = '../data/current/'
-        file = code + '_' + name
+        file = name
         print(file + ':')
         # makeDir(path)
         clearFile(path, file)
