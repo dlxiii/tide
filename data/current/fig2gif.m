@@ -1,7 +1,7 @@
 clear;close all;clc
 %参数调整
 filename= 'test.gif'; %你的gif文件的名字
-t1=0.1;t=0.1;%t1:第一张图暂停的时间，t其他时间间隔，用来控制播放速度，单位秒
+t1=1.0;t=0.1;%t1:第一张图暂停的时间，t其他时间间隔，用来控制播放速度，单位秒
 %By HarryLau,2578004536@qq.com
 ext = {'/*.jpeg', '/*.jpg', '/*.png', '/*.pgm', '/*.tig', '/*.bmp'};  
 d = [ ];
