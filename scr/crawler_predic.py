@@ -62,7 +62,7 @@ if __name__=="__main__":
                          ('鴨川','KAMOGAWA','1206'), \
                          ('岡田（大島）','OSHIMA-OKADA','1304')\
                          ]) 
-    timelist = [2014,1,1,2016,12,31]
+    timelist = [2014,1,1,2018,12,31]
     
     t0 = datetime.date(timelist[0],timelist[1],timelist[2])
     t1 = datetime.date(timelist[3],timelist[4],timelist[5])
