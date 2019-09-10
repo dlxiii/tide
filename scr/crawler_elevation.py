@@ -13,6 +13,7 @@ import datetime
 import numpy as np
 from bs4 import BeautifulSoup
 
+# https://www1.kaiho.mlit.go.jp/KANKYO/TIDE/tide_pred/index.htm
 # https://www1.kaiho.mlit.go.jp/KANKYO/TIDE/cgi-bin/tide_pred.cgi?area=
 
 def getData(code, year, month, day):
