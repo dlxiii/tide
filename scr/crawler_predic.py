@@ -13,6 +13,8 @@ import datetime
 import numpy as np
 from bs4 import BeautifulSoup
 
+# https://www1.kaiho.mlit.go.jp/KANKYO/TIDE/tide_pred/5.htm
+
 # https://www1.kaiho.mlit.go.jp/KANKYO/TIDE/cgi-bin/tide_pred.cgi?area=
 
 def getData(code, year, month, day):
@@ -62,7 +64,7 @@ if __name__=="__main__":
                          ('鴨川','KAMOGAWA','1206'), \
                          ('岡田（大島）','OSHIMA-OKADA','1304')\
                          ]) 
-    timelist = [2014,1,1,2018,12,31]
+    timelist = [2019,1,1,2019,1,31]
     
     t0 = datetime.date(timelist[0],timelist[1],timelist[2])
     t1 = datetime.date(timelist[3],timelist[4],timelist[5])
