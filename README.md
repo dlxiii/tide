@@ -7,4 +7,4 @@ Data crawlers from 潮汐推算 and 海潮流推算
 
 Data downloaded from JDOSS
 
-https://jdoss1.jodc.go.jp/vpage/tide_j.html
+* https://jdoss1.jodc.go.jp/vpage/tide_j.html
