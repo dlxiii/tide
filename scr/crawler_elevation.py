@@ -51,19 +51,24 @@ def writeFile(time, value, path, name):
 if __name__=="__main__":
     start = time.time()   
     codelist = np.array([\
-                         ('船橋','FUNABASHI','1218'), \
-                         ('晴海（東京）','TOKYO-HARUMI','1314'), \
-                         ('千葉灯標（千葉）','CHIBA-CHIBA LIGHT','1216'), \
-                         ('横浜新港（横浜）','YKOHAMA SHINKO','1403'), \
-                         ('君津','KIMITSU','1212'), \
-                         ('横須賀','YOKOSUKA','1407'), \
-                         ('久里浜（横須賀）','KURIHAMA','1410'), \
-                         ('城ケ島（三崎）','JO-GA-SHIMA','1413'), \
-                         ('布良','MERA','1208'), \
-                         ('鴨川','KAMOGAWA','1206'), \
-                         ('岡田（大島）','OKADA(O SHIMA) ','1304')\
+                         ('佐賀関','SAGANOSEKI','4401'),\
+                         ('鹿児島','KAGOSHIMA','4610'),\
+                         ('水俣（八代海）','MINAMATA','4310'),\
+                         ('尾崎浦（対馬浅茅湾）','OZAKIURA','4222')\
                          ]) 
-    timelist = [2014,1,1,2016,12,31]
+    #('船橋','FUNABASHI','1218'), \
+    #('晴海（東京）','TOKYO-HARUMI','1314'), \
+    #('千葉灯標（千葉）','CHIBA-CHIBA LIGHT','1216'), \
+    #('横浜新港（横浜）','YKOHAMA SHINKO','1403'), \
+    #('君津','KIMITSU','1212'), \
+    #('横須賀','YOKOSUKA','1407'), \
+    #('久里浜（横須賀）','KURIHAMA','1410'), \
+    #('城ケ島（三崎）','JO-GA-SHIMA','1413'), \
+    #('布良','MERA','1208'), \
+    #('鴨川','KAMOGAWA','1206'), \
+    #('岡田（大島）','OKADA(O SHIMA) ','1304')\
+    
+    timelist = [2018,1,1,2018,12,31]
     
     t0 = datetime.date(timelist[0],timelist[1],timelist[2])
     t1 = datetime.date(timelist[3],timelist[4],timelist[5])
