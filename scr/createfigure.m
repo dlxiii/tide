@@ -23,18 +23,18 @@ set(plot1(2),'DisplayName','simulation','LineWidth',2);
 ylabel({'Hight (m)'});
 
 % Create xlabel
-xlabel({'Time'});
+xlabel({'Time (JST)'});
 
 % Uncomment the following line to preserve the Y-limits of the axes
 ylim(axes1,[-1.5 1.5]);
 box(axes1,'on');
 % Set the remaining axes properties
 set(axes1,'FontName','Century Schoolbook L','FontSize',14,'XGrid','on',...
-    'YGrid','on','YTickLabel',{'-1.5','-1.0','-0.5','0.0','0.5','1.0','1.5'});
+    'YGrid','on','YTickLabel',{'-2.0','-1.0','-0.5','0.0','0.5','1.0','2.0'});
 % Create legend
 legend1 = legend(axes1,'show');
 set(legend1,'FontSize',14);
 
 % Create title
-title(['Time series tidal change(', station, ')']);
+title(['Time series tidal change (', station, ')']);
 

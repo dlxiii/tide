@@ -1,23 +1,24 @@
+clear all;
+clearvars; clc;
 %% 
 %%%------------------------------------------------------------------------
 %%%                          PATH CONFIGURATION
 %%%------------------------------------------------------------------------
-diary on;
+% diary on;
 % Which system am I using?
-if ismac    % On Mac
-    basedir = '/Users/yulong/Documents/';
-    addpath([basedir,'tools/fvcom-toolbox/']);
-    addpath([basedir,'tools/fvcom-toolbox/fvcom_prepro/']);
-    addpath([basedir,'tools/fvcom-toolbox/utilities/']);
-elseif isunix       % Unix?
+if ismac        % On Mac
+    basedir = '/Users/yulong/GitHub/';
+    addpath([basedir,'fvcomtoolbox/']);
+    addpath([basedir,'fvcomtoolbox/fvcom_prepro/']);
+    addpath([basedir,'fvcomtoolbox/custom/']);
+    addpath([basedir,'fvcomtoolbox/utilities/']);
+elseif isunix	% Unix?
     basedir = '/home/usr0/n70110d/';
-    addpath([basedir,'github/fvcom-toolbox/']);
-    addpath([basedir,'github/fvcom-toolbox/fvcom_prepro/']);
-    addpath([basedir,'github/fvcom-toolbox/utilities/']);
+    addpath([basedir,'github/fvcomtoolbox/custom/']);
+    addpath([basedir,'github/fvcomtoolbox/utilities/']);
 elseif ispc     % Or Windows?
     basedir = 'C:/Users/Yulong WANG/Documents/GitHub/';      
-    addpath([basedir,'fvcom-toolbox/']);
-    addpath([basedir,'fvcom-toolbox/fvcom_prepro/']);
+    addpath([basedir,'fvcom-toolbox/custom/']);
     addpath([basedir,'fvcom-toolbox/utilities/']);
 end
 
@@ -214,7 +215,7 @@ tideObserve.data.katsuura = importJdossTide(tideObserve.filename{4,1}, 1, 365);
 tideObserve.data.chiba = importJdossTide(tideObserve.filename{5,1}, 1, 365);
 tideObserve.data.yokohamashinko = importJdossTide(tideObserve.filename{6,1}, 1, 365);
 tideObserve.data.mera = importJdossTide(tideObserve.filename{7,1}, 1, 365);
-tideObserve.data.tokyo = importJdossTide(tideObserve.filename{8,1}, 1, 365);
+tideObserve.data.tokyo = importJdossTide(tideObserve.filename{1,1}, 1, 365);
 tideObserve.data.okada = importJdossTide(tideObserve.filename{9,1}, 1, 365);
 
 tideObserve.data.kurihamako = tideObserve.data.kurihamako';
